@@ -3,6 +3,8 @@
 极其简单的mybatis 分页
 1、配置 mybatis-config.xml
 
+
+```
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
@@ -17,12 +19,18 @@
        </plugin>
     </plugins>
 </configuration>
+```
+
 
 2、demo
+
+```
     Page<User> page = new Page<>();
-		page.setPageNo(pageNo);
-		page.setPageSize(10);
-		page.start();
-		List<User> l = userMapper.selectByExample(example);
-		page.end();
-		page.setResults(l);
+	page.setPageNo(pageNo);
+	page.setPageSize(10);
+	page.start();
+	List<User> l = userMapper.selectByExample(example);
+	page.end();
+	page.setResults(l);
+```
+
